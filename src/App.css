@@ -1,0 +1,54 @@
+.monopoly-game {
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  display: grid;
+  place-items: center;
+}
+
+.game-board {
+  width: var(--board-dimensions);
+  height: var(--board-dimensions);
+  background: lightblue;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-image: url("./assets/monopoly-board.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 100px repeat(9, 1fr) 100px;
+  grid-template-rows: 100px repeat(9, 1fr) 100px;
+  grid-template-areas:
+    "parking house house house house house house house house house jail"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "house jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo jumbo house"
+    "jail house house house house house house house house house go";
+}
+
+.parking {
+  grid-area: "parking";
+  background-color: lightcoral;
+}
+.house {
+  grid-area: "house";
+  background-color: lightgreen;
+}
+.jail {
+  grid-area: "jail";
+  background-color: lightcoral;
+}
+.go {
+  grid-area: "go";
+  background-color: lightcoral;
+}
+.jumbo {
+  grid-area: "jumbo";
+  background-color: lightblue;
+}
