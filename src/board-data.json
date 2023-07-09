@@ -3,6 +3,7 @@
     {
       "name": "Mediterranean Avenue",
       "id": "mediterraneanave",
+      "boardOrder": 1,
       "posistion": 2,
       "price": 60,
       "rent": 2,

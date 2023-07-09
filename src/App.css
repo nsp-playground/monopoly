@@ -1,20 +1,48 @@
 .monopoly-game {
   width: 100vw;
   height: 100vh;
-  background-color: whitesmoke;
+  /* background-color: lightgoldenrodyellow; */
   display: grid;
   place-items: center;
+  /* position: relative; */
+  background-color: lightgreen;
+}
+
+.monopoly-cover,
+.game-board {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  width: var(--board-dimensions);
+  height: var(--board-dimensions);
+}
+
+.monopoly-cover {
+  /* background-image: url("./assets/monopoly-board.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0; */
+  /* background-color: green; */
 }
 
 .game-board {
-  width: var(--board-dimensions);
-  height: var(--board-dimensions);
-  background: lightblue;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  /* z-index: 100; */
   background-image: url("./assets/monopoly-board.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* background: unset; */
+  /* background-color: none; */
+  /* outline: none; */
+
+  /* width: var(--board-dimensions); */
+  /* height: var(--board-dimensions); */
+  /* background-color: transparent; */
+  /* background: none; */
+  /* background: lightblue; */
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
   display: grid;
   grid-template-columns: 100px repeat(9, 1fr) 100px;
   grid-template-rows: 100px repeat(9, 1fr) 100px;
@@ -32,23 +60,24 @@
     "jail house house house house house house house house house go";
 }
 
+.block {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
 .parking {
   grid-area: "parking";
-  background-color: lightcoral;
 }
 .house {
   grid-area: "house";
-  background-color: lightgreen;
 }
 .jail {
   grid-area: "jail";
-  background-color: lightcoral;
 }
 .go {
   grid-area: "go";
-  background-color: lightcoral;
 }
 .jumbo {
   grid-area: "jumbo";
-  background-color: lightblue;
 }
